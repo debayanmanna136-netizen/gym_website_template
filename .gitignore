@@ -1,0 +1,34 @@
+# dependencies
+nextapp/node_modules
+nextapp/.pnp
+nextapp/.pnp.*
+nextapp/.yarn/*
+!nextapp/.yarn/patches
+!nextapp/.yarn/plugins
+!nextapp/.yarn/releases
+!nextapp/.yarn/versions
+
+# testing
+nextapp/coverage
+
+# next.js
+nextapp/.next/
+nextapp/out/
+
+# production
+nextapp/build
+
+# misc
+.DS_Store
+*.pem
+*.log
+
+# env files
+.env*
+
+# vercel
+nextapp/.vercel
+
+# typescript
+nextapp/*.tsbuildinfo
+nextapp/next-env.d.ts

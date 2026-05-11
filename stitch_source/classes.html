@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITNESS CAMP - Classes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&amp;family=Space+Grotesk:wght@600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#303030",
+                        "on-surface-variant": "#c5c9ac",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#caf300",
+                        "surface-tint": "#b0d500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#171e00",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-container": "#474746",
+                        "on-secondary": "#313030",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "primary-fixed-dim": "#b0d500",
+                        "tertiary-container": "#e4e2e1",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "primary-container": "#caf300",
+                        "on-tertiary-container": "#656464",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary": "#ffffff",
+                        "outline-variant": "#444932",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#e5e2e1",
+                        "background": "#131313",
+                        "secondary": "#c8c6c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#536600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#3e4c00",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-container": "#596c00",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "surface-variant": "#353534",
+                        "on-primary": "#2a3400",
+                        "outline": "#8f9378"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "label-caps": ["Lexend"],
+                        "display": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800 shadow-[0_4px_20px_rgba(212,255,0,0.1)]">
+<div class="flex justify-between items-center px-12 py-6 w-full">
+<div class="text-2xl font-black text-lime-400 italic italic font-display uppercase tracking-tighter">
+                FITNESS CAMP
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150 text-label-caps font-label-caps" href="#">Home</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-lime-400 border-b-2 border-lime-400 pb-1 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150 text-label-caps font-label-caps" href="#">Classes</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150 text-label-caps font-label-caps" href="#">Pricing</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150 text-label-caps font-label-caps" href="#">Trainers</a>
+</div>
+<button class="font-space-grotesk font-bold uppercase tracking-tighter bg-primary-container text-on-primary-container px-6 py-2 rounded-DEFAULT active:scale-95 duration-150 hover:bg-surface-tint transition-colors text-label-caps font-label-caps">
+                JOIN NOW
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-12 max-w-container-max mx-auto w-full">
+<!-- Header & Filters -->
+<div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
+<div>
+<h1 class="font-display text-display text-primary mb-4">TRAINING<br/><span class="text-primary-container">PROGRAMS</span></h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Push your limits with our elite training sessions. Filter by intensity to find the right challenge for today.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-surface-container border border-primary-container text-primary-container font-label-caps text-label-caps rounded-DEFAULT uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                    ALL
+                </button>
+<button class="px-6 py-3 bg-surface-container border border-surface-variant text-on-surface font-label-caps text-label-caps rounded-DEFAULT uppercase tracking-widest hover:border-primary-container transition-colors">
+                    HIGH
+                </button>
+<button class="px-6 py-3 bg-surface-container border border-surface-variant text-on-surface font-label-caps text-label-caps rounded-DEFAULT uppercase tracking-widest hover:border-primary-container transition-colors">
+                    MEDIUM
+                </button>
+</div>
+</div>
+<!-- Bento Grid Classes -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[400px]">
+<!-- Class Card 1 (Large) -->
+<div class="md:col-span-8 bg-surface-container relative group overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Intense functional fitness workout in a dark gym environment with dramatic lighting and heavy ropes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtF07jA-HiD4a8Jefuy4upu0SD_gzroKC1ugMtQDtBxDmSLOicpsm2YsSric5g20pXGlaaFWMrx-gJ3Mm0Hy0-xog3M4I3tV93amrs0XsQWqLAQ8R2A4Wl-mAzyYls7duZK04eUbi2RWNvx5QoIBOLR6gX1gjNdG3IHLfVxJks1MdZbbKPOtslHAzm064hY4jQ7spVbzslic1PMw_aYBL43LFQdv1TDcqngh81rjohcgRXqYyt8h6rBpkccBKMk7UM4K-NRopou28');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<div class="flex gap-3 mb-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm">HIGH INTENSITY</span>
+<span class="bg-surface-variant text-on-surface px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 60 MIN
+                        </span>
+</div>
+<h2 class="font-h1 text-h1 text-primary mb-2">FULL BODY HIIT</h2>
+<p class="font-body-md text-body-md text-secondary mb-6 max-w-md">Maximum calorie burn and cardiovascular endurance. No excuses, just relentless effort.</p>
+<button class="w-fit bg-primary-container text-on-primary-container px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-tint transition-colors rounded-DEFAULT flex items-center gap-2">
+                        BOOK CLASS <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Class Card 2 -->
+<div class="md:col-span-4 bg-surface-container relative group overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Heavy barbell deadlift in a modern industrial gym with moody blue and lime lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGmgyDrGYObfsYiAh5AFuQxMPWF56HevBYpVynT8gwnrg5eGwlZfUytdfLBdMYYemj6rj__gD4re6GXVGKF2HawTmEW58H_Kjzy268fdwAfJbhznzoiCvtRDywIR-DAv9bs_RXxG074ADAR9VAKocdZhN1_YdPjqGleQ3iuXiVkpeg-HHmUnTL0ZnMEN0Ffkyfyx34AynEQiRNqErF4VMNRPISDjgXWUZ1XY_DiK3G0F-CkxPO-5RuV2DsQr_E5oIdOr63jaUUBpk');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-black/20"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end border-t-2 border-transparent group-hover:border-primary-container transition-colors">
+<div class="flex gap-3 mb-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm">EXTREME</span>
+</div>
+<h2 class="font-h2 text-h2 text-primary mb-2">IRON STRENGTH</h2>
+<div class="flex items-center gap-2 text-secondary mb-6 font-body-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 45 MIN
+                    </div>
+<button class="w-full border-2 border-primary-container text-primary-container px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors rounded-DEFAULT">
+                        BOOK CLASS
+                    </button>
+</div>
+</div>
+<!-- Class Card 3 -->
+<div class="md:col-span-4 bg-surface-container relative group overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Person wrapping hands for boxing in a dark moody gym with neon accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsqSzqAuwt18AeDsUifnPGnHM0LrOd1DKw6-5wunLp1pzgjKF85MP2XM0rk_wgYsoScJw659UM4K1-LVJ0PdH4TTgWLUFPvZa3Y3mewa1Em-dtL50IVHzJNHiwtzv33N8Zt3kKxOZ-3aXpNmxx0bQUDm1EzehLBlEsRhXeMzsH8cHcDWXndqnqEHKtOiNNmYMZhS3IMzEwhnSOh05NlXxp2VYfhPoR3x-E4btLVfVJEYQt-Y3pMAwgZSVgBwmsJE0rKbmFctbSb7I');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-black/20"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<div class="flex gap-3 mb-4">
+<span class="bg-surface-variant text-on-surface px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm">HIGH INTENSITY</span>
+</div>
+<h2 class="font-h2 text-h2 text-primary mb-2">STRIKE &amp; CORE</h2>
+<div class="flex items-center gap-2 text-secondary mb-6 font-body-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 50 MIN
+                    </div>
+<button class="w-full border-2 border-surface-variant text-on-surface px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:border-primary-container hover:text-primary-container transition-colors rounded-DEFAULT">
+                        BOOK CLASS
+                    </button>
+</div>
+</div>
+<!-- Class Card 4 (Large) -->
+<div class="md:col-span-8 bg-surface-container relative group overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Yoga class in a dark serene studio space with soft dramatic lighting focusing on a challenging pose" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDl-_I_FIIEG_ZBox7lNCRVSPqyHS4xfPSOo9YJETBAOCwM9XyoUCvUT0vEKPzTasAAVYYWk_EsHhZ88AeNjA4tDAICyHcwo0jXoSNCxEUdQhNPIQylVVZjTy269wwH_zjp3fq72y6DR11RHcRn4W4zlWUgAOkVJZSrCrqDgWhr0XWyx0fn4svjpFtiS-BxZB-SZcXikzVnY0T7Rd2Oj68mZIQvay-HV5wNDa-5jXXZC3N9FlMzTuiIfPrNN4BCV6OiC-KWfEEg6w');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<div class="flex gap-3 mb-4">
+<span class="bg-surface-variant text-on-surface px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm">MEDIUM INTENSITY</span>
+<span class="bg-surface-variant text-on-surface px-3 py-1 text-xs font-label-caps uppercase tracking-widest rounded-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 75 MIN
+                        </span>
+</div>
+<h2 class="font-h1 text-h1 text-primary mb-2">POWER FLOW</h2>
+<p class="font-body-md text-body-md text-secondary mb-6 max-w-md">Active recovery, mobility, and core strength. Balance the intensity of the week.</p>
+<button class="w-fit border-2 border-surface-variant text-on-surface px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:border-primary-container hover:text-primary-container transition-colors rounded-DEFAULT flex items-center gap-2">
+                        BOOK CLASS <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-neutral-950 border-t-4 border-lime-400">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="text-3xl font-black text-lime-400 mb-4 font-display uppercase tracking-tighter italic">FITNESS CAMP</div>
+<p class="text-neutral-500 font-body-md mb-8 max-w-xs">Elite training facility for those committed to relentless progress.</p>
+<div class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500">
+                    © 2024 FITNESS CAMP. ALL PROGRESS IS PERSONAL.
+                </div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase tracking-widest">Links</h4>
+<ul class="flex flex-col gap-4 font-space-grotesk uppercase text-xs tracking-widest">
+<li><a class="text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Privacy Policy</a></li>
+<li><a class="text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase tracking-widest">Contact</h4>
+<ul class="flex flex-col gap-4 font-space-grotesk uppercase text-xs tracking-widest">
+<li><a class="text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Location</a></li>
+<li><a class="text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

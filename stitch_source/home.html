@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITNESS CAMP - Start Your Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&amp;family=Lexend:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#303030",
+                        "on-surface-variant": "#c5c9ac",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#caf300",
+                        "surface-tint": "#b0d500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#171e00",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-container": "#474746",
+                        "on-secondary": "#313030",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "primary-fixed-dim": "#b0d500",
+                        "tertiary-container": "#e4e2e1",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "primary-container": "#caf300",
+                        "on-tertiary-container": "#656464",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary": "#ffffff",
+                        "outline-variant": "#444932",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#e5e2e1",
+                        "background": "#131313",
+                        "secondary": "#c8c6c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#536600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#3e4c00",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-container": "#596c00",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "surface-variant": "#353534",
+                        "on-primary": "#2a3400",
+                        "outline": "#8f9378"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "label-caps": ["Lexend"],
+                        "display": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800 shadow-[0_4px_20px_rgba(212,255,0,0.1)]">
+<nav class="flex justify-between items-center px-12 py-6 w-full max-w-container-max mx-auto">
+<a class="text-2xl font-black text-lime-400 italic font-display" href="#">FITNESS CAMP</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-lime-400 border-b-2 border-lime-400 pb-1 active:scale-95 duration-150" href="#">Home</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150" href="#">Classes</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150" href="#">Pricing</a>
+<a class="font-space-grotesk font-bold uppercase tracking-tighter text-neutral-400 hover:text-lime-400 transition-all duration-300 active:scale-95 duration-150" href="#">Trainers</a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-surface-tint transition-colors shadow-[0_0_15px_rgba(202,243,0,0.3)] hover:shadow-[0_0_25px_rgba(202,243,0,0.5)]">
+                JOIN NOW
+            </button>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center overflow-hidden px-gutter">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-40" data-alt="Intense dark gym setting with a muscular athlete lifting heavy weights, dramatic spotlighting from above cutting through chalk dust, high contrast cinematic style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQh44UPMdkmjQewhgE_g4x_rQFhymIO11xZdLexe-H9JhVkqiwBXqfhuvoRfEOrL0wVjPKB_RDkoig61QEH4oftd1QJZqE3gQMF4_XRQxoneBl8ESXqxsQSkK6QLnIRqc_lhKjrX6X_Or8utP7qrYV-lJEluMUMGTE19P8C7V0xSBGDJFqR5Mdpa1QU5eFawW_HWTuQFam99erKGxZpWQks-9ySwt4q04FkJ0o8hF36nqpJc6g5LLZHuDQGF7Lhl3uKjbG0lkmC8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto text-center flex flex-col items-center">
+<h1 class="font-display text-display text-primary mb-6 uppercase drop-shadow-2xl">
+                    START YOUR <br/><span class="text-primary-fixed">JOURNEY</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mb-10">
+                    No excuses. Just results. Join the elite training facility designed for those who demand more from themselves.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-surface-tint transition-colors shadow-[0_0_20px_rgba(202,243,0,0.4)]">
+                        START FREE TRIAL
+                    </button>
+<button class="border-2 border-primary-container text-primary-container font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                        VIEW PROGRAMS
+                    </button>
+</div>
+</div>
+</section>
+<!-- Benefits Section - Bento Grid -->
+<section class="py-24 px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-h1 text-h1 text-primary uppercase mb-4">Why Fitness Camp?</h2>
+<p class="font-body-md text-body-md text-secondary">The tools, the team, and the time to reach your peak.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Benefit 1 -->
+<div class="bg-surface-container-low border border-surface-variant p-8 rounded-lg relative overflow-hidden group hover:border-primary-container transition-colors duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/10 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 block" data-icon="fitness_center">fitness_center</span>
+<h3 class="font-h2 text-h2 text-primary mb-3">State-of-the-art equipment</h3>
+<p class="font-body-md text-body-md text-secondary">Train with industry-leading machines and free weights selected for optimal biomechanics and heavy-duty performance.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface-container-low border border-surface-variant p-8 rounded-lg relative overflow-hidden group hover:border-primary-container transition-colors duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/10 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 block" data-icon="group">group</span>
+<h3 class="font-h2 text-h2 text-primary mb-3">Expert coaches</h3>
+<p class="font-body-md text-body-md text-secondary">Learn from certified professionals who have competed at the highest levels and know how to push your limits safely.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-low border border-surface-variant p-8 rounded-lg relative overflow-hidden group hover:border-primary-container transition-colors duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-primary-container/10 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 block" data-icon="schedule">schedule</span>
+<h3 class="font-h2 text-h2 text-primary mb-3">24/7 access</h3>
+<p class="font-body-md text-body-md text-secondary">Your schedule, your rules. Access the facility day or night with secure entry systems to fit your lifestyle.</p>
+</div>
+</div>
+</section>
+<!-- Classes Teaser Section -->
+<section class="py-24 px-gutter bg-surface-container-lowest border-y border-surface-variant">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-h1 text-h1 text-primary uppercase mb-2">Popular Classes</h2>
+<p class="font-body-md text-body-md text-secondary">Push your limits in a group setting.</p>
+</div>
+<a class="text-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:text-surface-tint mt-4 md:mt-0 flex items-center gap-2" href="#">
+                        View All Classes <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Class 1 -->
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer">
+<img alt="HIIT Class" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Group of diverse people doing high intensity interval training with kettlebells in a dark modern gym studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxAezcfy5BDvyg3E7THyxg0uey9zxZQdKVq6oSQdicbOWkoHqtFx2G_PdIqs6LUVSs4yZF4S9dBw4KvGfiFclwXBd8OPKDJHiMGmeh38H1NOI3wKgvrTq9g4RQ96qRTThKPs8NCah8kNJ0sYbNl_iKk6kLlkr8uOj0TKhLChCI8Wj-NMhnE-d1uWWUb84ZqgInngO7fiXoFntmWd4qMzkl4aaKx6nQph42uDsopKh3zMt-iYoqH0Tfq-yBJx0mF19DKtPXOFWYhCs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-surface-container border border-surface-variant text-on-surface px-2 py-1 text-xs font-label-caps uppercase rounded mb-3 inline-block">High Intensity</span>
+<h3 class="font-h2 text-h2 text-primary uppercase mb-1">Inferno HIIT</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">45 minutes of pure metabolic conditioning.</p>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-container transition-colors duration-300 pointer-events-none rounded-lg"></div>
+</div>
+<!-- Class 2 -->
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer">
+<img alt="Strength Class" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of heavily chalked hands gripping a barbell with heavy weight plates in a gritty industrial gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeV2HNUbVefi-3hEkgNlEKgT088ItrNoNbCaciFQ0iIfg8gXW2dE9oV-NBi2lsRpLBSs6frb4A1RfxGzE2OiqseO4ZjcrsFZ5fJLlX9sWXP0D3bFXd1l704OvnPzZiYpEQUXL0CCnJkvZ-UgWxu6B4JPWZHztefsRcwZcQUoo0K6xkHxW9GT5x2kiGqyZPR9pfrOqiDkDi4XotAolUvlArScXd6B2CJdJDdvL70h9TgsqWaiDO-DI3VfoufHdk2iP25JffAAhmlAk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-surface-container border border-surface-variant text-on-surface px-2 py-1 text-xs font-label-caps uppercase rounded mb-3 inline-block">Strength</span>
+<h3 class="font-h2 text-h2 text-primary uppercase mb-1">Power Lifting</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Master the big three lifts with expert form coaching.</p>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-container transition-colors duration-300 pointer-events-none rounded-lg"></div>
+</div>
+<!-- Class 3 -->
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer">
+<img alt="Boxing Class" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Silhouetted boxer hitting a heavy bag in a dark room with a single dramatic overhead spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3lcrVedOoJImHoL42rlkSt2NuXzqj5BFuwI-ILyCwl5OZx9RbiB3xRjOEIfDGaYuNbDgP8QczkctwiNqEsY0cG2LTjsaNwJuf5_rg38FTJQuv7RPXeu8yTX5EmiJLXkk-PO5NUWK_zyzU9LraRZoQwAtVDQ2xKumdXlrCiK-onbmNU8WsZZytsViEF9vhYRRLtE_bo-bPkI6ClQHDJ1JdH8epKyrKLOE6r97geMYRRe5ZGnAncU241sYlHt4GlpTD7Y_VCCz2Hh4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-surface-container border border-surface-variant text-on-surface px-2 py-1 text-xs font-label-caps uppercase rounded mb-3 inline-block">Cardio / Combat</span>
+<h3 class="font-h2 text-h2 text-primary uppercase mb-1">Strike Fit</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Heavy bag work combined with agility drills.</p>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-container transition-colors duration-300 pointer-events-none rounded-lg"></div>
+</div>
+<!-- Class 4 -->
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer">
+<img alt="Recovery Class" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Athletes stretching on mats in a dimly lit studio with subtle neon rim lighting accenting the space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHR9KVy-R4XatPWv3f3ei-mjaGf_57vINUrxW-08n6o2NOh_H-4uiVPWWB6vtorVe20TdOcAJzvS-Gv3HQ6-QvYg8m-eb4cV8UB9gaBDBCS-UT735sFOLT1oXOXAKa_Kmz8_HcCcsSRX0OCFJZf9V7OS9LDzc2XVH_7x7TLtu1aAta2rc6HirmjX49yBYpPsj4AoPRYaaFaQiAx_gYxwuFEWu95r8xfeVHSjO4b_90WJKBjbjlyb7ECFnzSMgPGtiQeU2rJWwgj5k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="bg-surface-container border border-surface-variant text-on-surface px-2 py-1 text-xs font-label-caps uppercase rounded mb-3 inline-block">Recovery</span>
+<h3 class="font-h2 text-h2 text-primary uppercase mb-1">Mobility Flow</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Active recovery and deep stretching to prevent injury.</p>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-container transition-colors duration-300 pointer-events-none rounded-lg"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full pt-20 pb-10 border-t-4 border-lime-400">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<h2 class="text-3xl font-black text-lime-400 mb-4 font-display italic">FITNESS CAMP</h2>
+<p class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500 mt-8">
+                    © 2024 FITNESS CAMP. ALL PROGRESS IS PERSONAL.
+                </p>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-8 md:justify-end">
+<a class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Location</a>
+<a class="font-space-grotesk uppercase text-xs tracking-widest text-neutral-500 hover:text-white transition-colors cursor-pointer" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>
