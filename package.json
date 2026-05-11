@@ -6,7 +6,7 @@
     "dev": "cross-env NEXT_DISABLE_MEM_OVERRIDE=true __NEXT_DISABLE_MEMORY_WATCHER=true next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "16.2.4",
