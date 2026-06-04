@@ -70,7 +70,7 @@ export default function Navbar() {
           className="text-2xl font-black text-lime-400 italic uppercase tracking-tighter cursor-pointer hover:drop-shadow-[0_0_8px_rgba(202,243,0,0.5)] transition-[filter,transform] duration-300"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          FITNESS CAMP
+          DEMO GYM
         </button>
 
         {/* Desktop Nav */}

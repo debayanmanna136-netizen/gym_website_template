@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "FITNESS CAMP — Elite Training Facility",
+  title: "DEMO GYM — Training Facility",
   description:
-    "No excuses. Just results. Join the elite training facility designed for those who demand more from themselves.",
+    "No excuses. Just results. Join the training facility designed for those who demand more from themselves.",
   keywords: ["gym", "fitness", "training", "classes", "personal trainer"],
 };
 

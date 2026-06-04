@@ -17,16 +17,16 @@ export default function Footer() {
             className="text-3xl font-black text-lime-400 mb-4 italic uppercase tracking-tighter"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            FITNESS CAMP
+            DEMO GYM
           </div>
           <p className="text-neutral-500 text-sm mb-6 max-w-xs" style={{ fontFamily: "'Lexend', sans-serif" }}>
-            Elite training facility for those committed to relentless progress.
+            Training facility for those committed to relentless progress.
           </p>
           <p
             className="uppercase text-xs tracking-widest text-neutral-500"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            © {new Date().getFullYear()} FITNESS CAMP. ALL PROGRESS IS PERSONAL.
+            © {new Date().getFullYear()} DEMO GYM. ALL PROGRESS IS PERSONAL.
           </p>
         </div>
 

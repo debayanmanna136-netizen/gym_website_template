@@ -9,7 +9,7 @@ export default function BenefitsSection() {
     <section className="py-24 px-6 md:px-12 max-w-[1280px] mx-auto w-full">
       <div className="text-center mb-16 reveal">
         <h2 className="text-[clamp(32px,5vw,48px)] font-bold leading-[1.2] tracking-[-0.02em] text-white uppercase mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-          Why Fitness Camp?
+          Why Demo Gym?
         </h2>
         <p className="text-[#c8c6c5] text-base" style={{ fontFamily: "'Lexend', sans-serif" }}>
           The tools, the team, and the time to reach your peak.

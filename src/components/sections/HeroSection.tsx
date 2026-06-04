@@ -27,7 +27,7 @@ export default function HeroSection() {
           START YOUR <br /><span className="text-[#caf300]">JOURNEY</span>
         </h1>
         <p className="text-lg leading-relaxed text-[#c8c6c5] max-w-2xl mb-10" style={{ fontFamily: "'Lexend', sans-serif" }}>
-          No excuses. Just results. Join the elite training facility designed for those who demand more from themselves.
+          No excuses. Just results. Join the training facility designed for those who demand more from themselves.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button onClick={() => scrollTo("pricing")} className="magnetic-btn bg-[#caf300] text-[#596c00] font-semibold text-sm px-8 py-4 uppercase tracking-widest hover:bg-[#b0d500] transition-colors shadow-[0_0_20px_rgba(202,243,0,0.4)] cursor-pointer" style={{ fontFamily: "'Lexend', sans-serif" }}>

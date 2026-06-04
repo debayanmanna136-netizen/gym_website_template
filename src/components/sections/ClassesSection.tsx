@@ -10,7 +10,7 @@ export default function ClassesSection() {
             TRAINING<br /><span className="text-[#caf300]">PROGRAMS</span>
           </h2>
           <p className="text-lg leading-relaxed text-[#c8c6c5] max-w-2xl" style={{ fontFamily: "'Lexend', sans-serif" }}>
-            Push your limits with our elite training sessions. Filter by intensity to find the right challenge for today.
+            Push your limits with our training sessions. Filter by intensity to find the right challenge for today.
           </p>
         </div>
 

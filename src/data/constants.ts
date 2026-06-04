@@ -1,4 +1,4 @@
-export const HERO_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuDxQh44UPMdkmjQewhgE_g4x_rQFhymIO11xZdLexe-H9JhVkqiwBXqfhuvoRfEOrL0wVjPKB_RDkoig61QEH4oftd1QJZqE3gQMF4_XRQxoneBl8ESXqxsQSkK6QLnIRqc_lhKjrX6X_Or8utP7qrYV-lJEluMUMGTE19P8C7V0xSBGDJFqR5Mdpa1QU5eFawW_HWTuQFam99erKGxZpWQks-9ySwt4q04FkJ0o8hF36nqpJc6g5LLZHuDQGF7Lhl3uKjbG0lkmC8";
+export const HERO_IMAGE = "/hero-bodybuilder.png";
 
 export const TRAINERS_DATA = [
   {

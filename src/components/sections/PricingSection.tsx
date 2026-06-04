@@ -3,7 +3,7 @@ const plans = [
     features: ["Full Gym Access", "Locker Room Use", "1 Free Intro Session"], highlight: false, badge: null },
   { name: "Pro", price: "$89", desc: "The core experience for dedicated athletes.",
     features: ["Everything in Basic", "Unlimited Classes", "Guest Pass (2/month)", "Sauna & Recovery Zone"], highlight: true, badge: "Most Popular" },
-  { name: "Elite", price: "$149", desc: "Maximum access for peak performance.",
+  { name: "Pro Plus", price: "$149", desc: "Maximum access for peak performance.",
     features: ["Everything in Pro", "4 Personal Training Sessions", "Nutrition Plan", "Priority Class Booking"], highlight: false, badge: null },
 ];
 
