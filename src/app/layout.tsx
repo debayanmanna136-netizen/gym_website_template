@@ -4,10 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "DEMO GYM — Training Facility",
+  title: "FitnessCh — Reach Your Best Shape For Life",
   description:
-    "No excuses. Just results. Join the training facility designed for those who demand more from themselves.",
-  keywords: ["gym", "fitness", "training", "classes", "personal trainer"],
+    "Get stronger, leaner, and more confident with custom fitness and nutrition coaching built just for your lifestyle.",
+  keywords: ["gym", "fitness", "coaching", "personal trainer", "nutrition", "workout plan", "FitnessCh"],
 };
 
 export default function RootLayout({
@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-              <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Lexend:wght@400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Lexend:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -29,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#131313] text-[#e5e2e1] antialiased min-h-screen flex flex-col">
+      <body className="bg-[#070707] text-[#f3f4f6] antialiased min-h-screen flex flex-col selection:bg-[#00ff55] selection:text-[#050505]">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

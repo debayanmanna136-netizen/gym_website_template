@@ -1,54 +1,99 @@
-const plans = [
-  { name: "Basic", price: "$49", desc: "Essential access for those starting their journey.",
-    features: ["Full Gym Access", "Locker Room Use", "1 Free Intro Session"], highlight: false, badge: null },
-  { name: "Pro", price: "$89", desc: "The core experience for dedicated athletes.",
-    features: ["Everything in Basic", "Unlimited Classes", "Guest Pass (2/month)", "Sauna & Recovery Zone"], highlight: true, badge: "Most Popular" },
-  { name: "Pro Plus", price: "$149", desc: "Maximum access for peak performance.",
-    features: ["Everything in Pro", "4 Personal Training Sessions", "Nutrition Plan", "Priority Class Booking"], highlight: false, badge: null },
-];
+"use client";
+
+import { PRICING_PLANS } from "@/data/constants";
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-24 px-6 md:px-12">
-      <div className="w-full max-w-[1280px] mx-auto">
-        <div className="text-center mb-16 md:mb-24 reveal">
-          <h2 className="text-[clamp(48px,8vw,72px)] font-black leading-[1.1] tracking-[-0.04em] text-white mb-4 uppercase" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            Commit to Progress
+    <section id="pricing" className="py-28 px-6 md:px-12 bg-[#0a0a0a] text-white relative overflow-hidden border-t border-[#262626]">
+      {/* Background Radial Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-radial from-[#00ff55]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-[1280px] mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-20 max-w-2xl mx-auto reveal">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#00ff55] text-xs font-bold uppercase tracking-widest mb-6">
+            <span>COACHING PROGRAMS</span>
+          </div>
+          <h2
+            className="text-[clamp(36px,5vw,56px)] font-black leading-[1.08] tracking-[-0.03em] uppercase text-white mb-4"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Invest In Your <span className="text-[#00ff55]">Transformation</span>
           </h2>
-          <p className="text-lg leading-relaxed text-[#c8c6c5] max-w-2xl mx-auto" style={{ fontFamily: "'Lexend', sans-serif" }}>
-            Choose the tier that matches your intensity. No excuses, just results.
+          <p className="text-neutral-400 text-lg leading-relaxed">
+            Choose the tier that matches your goals and intensity. Every plan comes with our 100% accountability guarantee.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center reveal-stagger">
-          {plans.map((plan) => (
-            <div key={plan.name} className={`relative flex flex-col h-full group transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-2 will-change-transform ${plan.highlight ? "bg-[#2a2a2a] rounded-sm p-8 border-t-4 border-[#caf300] shadow-[0_0_30px_rgba(202,243,0,0.15)] transform md:scale-105 z-10" : "bg-[#201f1f] rounded-sm p-8 border border-[#444932] hover:border-[#caf300]/50"}`}>
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch reveal-stagger">
+          {PRICING_PLANS.map((plan) => (
+            <div
+              key={plan.name}
+              className={`relative flex flex-col justify-between rounded-3xl p-8 md:p-10 transition-all duration-300 group hover:-translate-y-2 ${
+                plan.highlight
+                  ? "bg-[#141414] border-2 border-[#00ff55] shadow-[0_0_40px_rgba(0,255,85,0.2)] z-10 scale-105 lg:-my-4"
+                  : "bg-[#111111] border border-[#262626] hover:border-neutral-600"
+              }`}
+            >
               {plan.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#caf300] text-[#596c00] font-semibold text-xs px-4 py-1 rounded-sm uppercase" style={{ fontFamily: "'Lexend', sans-serif" }}>
+                <div
+                  className={`absolute -top-4 left-1/2 -translate-x-1/2 font-black text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap ${
+                    plan.highlight
+                      ? "bg-[#00ff55] text-[#050505]"
+                      : "bg-white/10 text-white border border-white/20"
+                  }`}
+                >
                   {plan.badge}
                 </div>
               )}
-              <div className="mb-8 mt-2">
-                <h3 className={`text-[32px] font-semibold leading-[1.3] uppercase mb-2 ${plan.highlight ? "text-[#caf300]" : "text-white"}`} style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.name}</h3>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-[clamp(48px,6vw,72px)] font-black leading-[1.1] text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.price}</span>
-                  <span className="text-[#c8c6c5] text-base" style={{ fontFamily: "'Lexend', sans-serif" }}>/month</span>
+
+              <div>
+                <h3
+                  className="text-2xl font-black uppercase text-white mb-2"
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                >
+                  {plan.name}
+                </h3>
+                <p className="text-neutral-400 text-sm mb-6 min-h-[40px]">
+                  {plan.desc}
+                </p>
+
+                <div className="flex items-baseline gap-1.5 mb-8 pb-8 border-b border-[#262626]">
+                  <span
+                    className="text-5xl md:text-6xl font-black text-white"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {plan.price}
+                  </span>
+                  <span className="text-neutral-400 text-xs font-semibold uppercase tracking-wider">
+                    {plan.period}
+                  </span>
                 </div>
-                <p className="text-[#c5c9ac] text-base" style={{ fontFamily: "'Lexend', sans-serif" }}>{plan.desc}</p>
-              </div>
-              <div className="flex-grow mb-8">
-                <ul className="space-y-4">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-[#caf300] filled-icon" style={{ fontSize: "22px" }}>check_circle</span>
-                      <span className="text-[#e5e2e1] text-base" style={{ fontFamily: "'Lexend', sans-serif" }}>{f}</span>
+
+                {/* Features List */}
+                <ul className="space-y-4 mb-10">
+                  {plan.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-neutral-300 font-medium">
+                      <span className="material-symbols-outlined text-[#00ff55] filled-icon text-lg flex-shrink-0 mt-0.5">
+                        check_circle
+                      </span>
+                      <span>{feat}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <button className={`magnetic-btn w-full text-center font-semibold text-xs uppercase py-4 rounded-sm tracking-widest transition-colors duration-300 cursor-pointer ${plan.highlight ? "bg-[#caf300] text-[#596c00] hover:bg-[#b0d500]" : "border-2 border-[#caf300] text-[#caf300] hover:bg-[#caf300] hover:text-[#596c00]"}`} style={{ fontFamily: "'Lexend', sans-serif" }}>
-                Choose Plan
-              </button>
+
+              <a
+                href="#contact"
+                className={`magnetic-btn w-full text-center font-extrabold text-xs uppercase py-4 rounded-full tracking-widest transition-all duration-300 block ${
+                  plan.highlight
+                    ? "bg-[#00ff55] text-[#050505] hover:bg-[#16c84b] shadow-[0_0_20px_rgba(0,255,85,0.3)]"
+                    : "bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/30"
+                }`}
+              >
+                SELECT {plan.name.split(" ")[0]}
+              </a>
             </div>
           ))}
         </div>

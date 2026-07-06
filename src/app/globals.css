@@ -1,37 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #131313;
-  --color-surface: #131313;
-  --color-surface-dim: #131313;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-surface-container-low: #1c1b1b;
-  --color-surface-container: #201f1f;
-  --color-surface-container-high: #2a2a2a;
-  --color-surface-container-highest: #353534;
-  --color-surface-variant: #353534;
-  --color-surface-bright: #3a3939;
-  --color-surface-tint: #b0d500;
+  --color-dark-bg: #070707;
+  --color-dark-surface: #111111;
+  --color-dark-card: #161616;
+  --color-dark-border: #262626;
+  
+  --color-light-bg: #fafafa;
+  --color-light-surface: #f0f0f0;
+  --color-light-card: #ffffff;
+  --color-light-border: #e5e5e5;
 
-  --color-primary: #ffffff;
-  --color-on-primary: #2a3400;
-  --color-primary-container: #caf300;
-  --color-on-primary-container: #596c00;
-  --color-primary-fixed: #caf300;
-  --color-primary-fixed-dim: #b0d500;
-  --color-inverse-primary: #536600;
-
-  --color-secondary: #c8c6c5;
-  --color-on-secondary: #313030;
-  --color-secondary-container: #474746;
-  --color-on-secondary-container: #b7b5b4;
-
-  --color-on-background: #e5e2e1;
-  --color-on-surface: #e5e2e1;
-  --color-on-surface-variant: #c5c9ac;
-
-  --color-outline: #8f9378;
-  --color-outline-variant: #444932;
+  --color-neon: #00ff55;
+  --color-neon-dim: #16c84b;
+  --color-neon-dark: #0a4f21;
+  --color-neon-glow: rgba(0, 255, 85, 0.35);
 }
 
 * {
@@ -40,13 +23,15 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  background-color: #131313;
-  color: #e5e2e1;
+  background-color: var(--color-dark-bg);
+  color: #f3f4f6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ── Material Icons ────────────────────────────────── */
@@ -70,14 +55,23 @@ body {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.lime-glow {
-  box-shadow: 0 0 15px rgba(202, 243, 0, 0.4);
+/* ── Neon Glow Utilities ───────────────────────────── */
+.neon-glow {
+  box-shadow: 0 0 25px rgba(0, 255, 85, 0.4);
+}
+
+.neon-glow-lg {
+  box-shadow: 0 0 45px rgba(0, 255, 85, 0.5), 0 0 15px rgba(0, 255, 85, 0.3);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(0, 255, 85, 0.6);
 }
 
 /* ── Scroll-reveal Animations ──────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(35px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
@@ -102,6 +96,8 @@ body {
 .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.15s; }
 .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.25s; }
 .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.35s; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.45s; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.55s; }
 
 .reveal-stagger.visible > * {
   opacity: 1;
@@ -112,13 +108,28 @@ body {
 /* Slide-in from left */
 .reveal-left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-40px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+  will-change: auto;
+}
+
+/* Slide-in from right */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.visible {
   opacity: 1;
   transform: translateX(0);
   will-change: auto;
@@ -139,37 +150,41 @@ body {
   will-change: auto;
 }
 
-/* ── Magnetic Button Hover ─────────────────────────── */
+/* ── Magnetic & Interactive Button Hover ───────────── */
 .magnetic-btn {
   transition: transform 0.25s cubic-bezier(0.33, 1, 0.68, 1),
               box-shadow 0.3s ease,
               background-color 0.3s ease,
-              color 0.3s ease;
+              color 0.3s ease,
+              border-color 0.3s ease;
   will-change: transform;
+  position: relative;
+  overflow: hidden;
 }
 
 .magnetic-btn:hover {
-  box-shadow: 0 0 25px rgba(202, 243, 0, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 85, 0.35);
+}
+
+.magnetic-btn:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 /* ── Custom Cursor Glow ────────────────────────────── */
 .cursor-glow {
   pointer-events: none;
   position: fixed;
-  /* top/left removed — JS moves it via transform: translate3d() */
   top: 0;
   left: 0;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(202, 243, 0, 0.06) 0%, transparent 70%);
-  /* mix-blend-mode removed — it forces a full compositing layer on the page */
+  background: radial-gradient(circle, rgba(0, 255, 85, 0.08) 0%, transparent 70%);
   z-index: 9999;
   transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   opacity: 0;
-  /* Promote to GPU layer so movement is fully compositor-driven */
   will-change: transform;
-  /* Contain paint to the element itself */
   contain: layout paint;
 }
 
@@ -178,13 +193,58 @@ body {
 }
 
 .cursor-glow.hovering {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(202, 243, 0, 0.12) 0%, transparent 70%);
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 255, 85, 0.15) 0%, transparent 70%);
 }
 
-/* ── Divider Line ──────────────────────────────────── */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #444932 50%, transparent);
+/* ── Custom Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff55;
+}
+
+/* ── Silver/Metallic Gradient Text ─────────────────── */
+.text-metallic {
+  background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-neon-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #00ff55 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Floating UI Animations ────────────────────────── */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out 2s infinite;
 }

@@ -3,10 +3,12 @@
 import useScrollReveal from "@/hooks/useScrollReveal";
 import CursorGlow from "@/components/CursorGlow";
 import HeroSection from "@/components/sections/HeroSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
-import ClassesSection from "@/components/sections/ClassesSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import TransformationsSection from "@/components/sections/TransformationsSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import CoachSection from "@/components/sections/CoachSection";
 import PricingSection from "@/components/sections/PricingSection";
-import TrainersSection from "@/components/sections/TrainersSection";
+import BookingSection from "@/components/sections/BookingSection";
 
 export default function HomePage() {
   useScrollReveal();
@@ -15,14 +17,12 @@ export default function HomePage() {
     <>
       <CursorGlow />
       <HeroSection />
-      <div className="section-divider" />
-      <BenefitsSection />
-      <div className="section-divider" />
-      <ClassesSection />
-      <div className="section-divider" />
+      <HowItWorksSection />
+      <TransformationsSection />
+      <TestimonialsSection />
+      <CoachSection />
       <PricingSection />
-      <div className="section-divider" />
-      <TrainersSection />
+      <BookingSection />
     </>
   );
 }
